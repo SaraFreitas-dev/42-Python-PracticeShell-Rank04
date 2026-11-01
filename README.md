@@ -61,8 +61,8 @@ A Python-based **PracticeShell simulator** inspired by the new 42 School Common 
 Clone the repository:
 
 ```bash
-git clone https://github.com/SaraFreitas-dev/42-Python-Practice-Rank04
-cd 42-Python-Practice-Rank04
+git clone https://github.com/SaraFreitas-dev/42-Python-PracticeShell-Rank04
+cd 42-Python-PracticeShell-Rank04
 ```
 
 Run the PracticeShell:
@@ -231,7 +231,7 @@ It is not affiliated with or endorsed by 42 School, and it does not contain any 
 
 ## 💡 Suggestions
 
-Found a bug, a missing test case or have an idea? Feel free to [open an issue](https://github.com/SaraFreitas-dev/42-Python-Practice-Rank04/issues).
+Found a bug, a missing test case or have an idea? Feel free to [open an issue](https://github.com/SaraFreitas-dev/42-Python-PracticeShell-Rank04/issues).
 
 ---
 
