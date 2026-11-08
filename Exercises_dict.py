@@ -548,6 +548,38 @@ Edge cases to handle:
 
 --------------------------------------------------------------------------------
 
+Visual explanation:
+
+    1) Diamond shape: NOT a cycle  =  False
+
+             a
+           ↙   ↘
+          b     c
+           ↘   ↙
+             d
+
+       d is reached twice (from b and from c), but no arrow leads back up.
+
+    2) Simple cycle  =  True
+
+          a ──→ b
+          ↑     │
+          │     ↓
+          └──── c
+
+       Following the arrows from a, you come back to a.
+
+    3) One cycle anywhere is enough  =  True
+
+          a ──→ b          c ──→ d
+                           ↑     │
+                           │     ↓
+                           └──── e
+
+       a and b have no cycle, but c, d and e do.
+
+--------------------------------------------------------------------------------
+  
 Your function must be declared as follows:
 
     def has_cycle(graph: dict[str, list[str]]) -> bool:
