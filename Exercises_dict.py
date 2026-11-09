@@ -11,6 +11,12 @@ _rng = random.Random(42)
 _CHAIN = {str(i): [str(i + 1)] for i in range(3000)}
 _CHAIN["3000"] = []
 
+_SHORT_CHAIN = {str(i): [str(i + 1)] for i in range(500)}
+_SHORT_CHAIN["500"] = []
+
+_SHORT_CHAIN_LOOP = {str(i): [str(i + 1)] for i in range(500)}
+_SHORT_CHAIN_LOOP["500"] = ["250"]
+
 _SHUFFLED_INTERVALS = [[i, i + 1] for i in range(0, 10000, 2)]
 _rng.shuffle(_SHUFFLED_INTERVALS)
 
@@ -609,7 +615,9 @@ Examples:
             ([{"a": ["missing"]}], False),
             ([{"x": [], "y": [], "z": []}], False),
             ([{"1": ["2"], "2": ["3"], "3": ["4"], "4": ["2"]}], True),
-            ([_CHAIN], False),
+            ([{"a": ["b", "c"], "b": [], "d": ["a"]}], False),
+            ([_SHORT_CHAIN], False),
+            ([_SHORT_CHAIN_LOOP], True),
         ],
     },
 
